@@ -1,0 +1,69 @@
+
+@import 'antd/es/style/themes/default.less';
+.demo1 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #434750;
+  .list {
+    position: relative;
+    transform: skewY(-15deg);
+    .item {
+      position: relative;
+      width: 200px;
+      background-color: #3e3f46;
+      padding: 15px;
+      z-index: var(--i);
+      transition: 0.5s;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 100%;
+        top: 0;
+        left: -40px;
+        transform: skewY(45deg);
+        transform-origin: right;
+        background-color: #2e3133;
+        transition: 0.5s;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        top: -40px;
+        left: 0px;
+        transform: skewX(45deg);
+        transform-origin: bottom;
+        background-color: #35383e;
+        transition: 0.5s;
+      }
+      &:hover {
+        transform: translateX(-50px);
+        background-color: @primary-color;
+        &::before {
+          background-color: #1f5378;
+        }
+        &::after {
+          background-color: #2982b9;
+        }
+        .text {
+          color: #fff;
+        }
+      }
+      &:last-child::after {
+        box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.25);
+      }
+      .text {
+        user-select: none;
+        color: #999;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+        transition: 0.5s;
+      }
+    }
+  }
+}
