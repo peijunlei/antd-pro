@@ -171,6 +171,8 @@ const Login: React.FC = () => {
           subTitle={intl.formatMessage({ id: 'pages.layouts.userLayout.title' })}
           initialValues={{
             autoLogin: true,
+            username:'admin',
+            password:'ant.design'
           }}
           actions={[
             <FormattedMessage
