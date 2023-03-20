@@ -22,6 +22,11 @@ const demoRoutes = [
         path: '/demo/demo1',
         component: './demo/demo1',
       },
+      {
+        name: 'demo2',
+        path: '/demo/demo2',
+        component: './demo/demo2',
+      },
     ],
   },
 ]
